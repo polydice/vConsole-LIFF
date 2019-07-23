@@ -18,6 +18,6 @@ action "Tag" {
 action "Publish" {
   needs = "Tag"
   uses = "nuxt/actions-yarn@master"
-  args = "publish --access public"
+  args = "publish"
   secrets = ["NPM_AUTH_TOKEN"]
 }
