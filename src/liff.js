@@ -37,7 +37,6 @@ class VConsoleLIFFTab extends vConsole.VConsolePlugin {
     liff.init(data => {
       const profile = data.context;
       const list = Object.keys(profile).map(key => ({ name: tool.htmlEncode(key), value: tool.htmlEncode(profile[key]) }));
-      console.log(list);
   		$log.innerHTML = $.render(tplList, { list: list }, true);
     }, err => {
       $log.innerHTML = err;
